@@ -1,2 +1,3 @@
 # gitops-integration
-fir
+
+Study Gitops
