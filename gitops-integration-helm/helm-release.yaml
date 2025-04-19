@@ -1,0 +1,15 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: gitops-integration
+  namespace: flux-system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: ./gitops-integration-helm
+      sourceRef:
+        kind: GitRepository
+        name: flux-system
+        namespace: flux-system
+      version: "0.1.0" # Replace with the version in Chart.yaml
